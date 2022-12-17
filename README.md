@@ -1,6 +1,6 @@
 # ndarray
 
-Multidimensional Arrays in Dart.
+N-Dimensional Arrays in Dart.
 
 ## Project stucture
 
