@@ -10,7 +10,8 @@ List<String> getContributors() {
       run('git', arguments: ['shortlog', 'HEAD', '-sne'], quiet: true);
   List<String> contributors = [];
   summary.split(lineSeparator()).forEach((line) {
-    if (line.isNotEmpty) {
+    if (line.isNotEmpty &&
+        !(line.contains('ci@local') || line.contains('github-actions'))) {
       contributors.add(line.split('\t').last);
     }
   });
