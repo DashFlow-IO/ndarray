@@ -8,7 +8,7 @@ main(args) => grind(args);
 
 @DefaultTask('Initialize stuff.')
 void init() {
-  log('Initializing stuff...');
+  	log('Initializing stuff...');
   final ffigen = PubApp.global('ffigen');
   if (!ffigen.isActivated) {
     log('Activating ffigen...');
