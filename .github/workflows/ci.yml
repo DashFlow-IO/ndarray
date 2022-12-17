@@ -1,0 +1,59 @@
+name: CI
+on:
+  push: {branches: [main]}
+  pull_request:
+
+  # Allow the workflow to be manually run:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: 'Static analysis'
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'master'
+    - run: flutter --version
+    - run: flutter pub get
+    - run: flutter analyze --fatal-infos --fatal-warnings .
+
+
+  format:
+    name: 'Code formatting'
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'master'
+
+    # Resolving flutter dependencies:
+    - name: 'Resolving flutter dependencies'
+      run: flutter --version
+
+    # Dart Format:
+    - name: 'Dart Format'
+      id: dart-format
+      run: |
+        dart format --fix .
+
+        if [[ -z "$(git status --porcelain)" ]]; then
+          echo "No changes to commit."
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+    
+    # Commit changes and push:
+    - name: 'Commit changes and push'
+      if: steps.dart-format.outputs.changed == 'true'
+      run: |
+        git config --global user.name 'CI'
+        git config --global user.email 'ci@local'
+        git add *
+        git commit -am "dart format changes"
+        git push
