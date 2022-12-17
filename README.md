@@ -2,7 +2,9 @@
 
 N-Dimensional Arrays in Dart.
 
-## Project stucture
+## Contributing
+
+### Project stucture
 
 This project uses the following structure:
 
@@ -15,9 +17,31 @@ This project uses the following structure:
 * platform folders (`android`, `ios`, `windows`, etc.): Contains the build files
   for building and bundling the native code library with the platform application.
 
-## Binding to native code
+### Running Tasks
+
+First you need to activate `grinder`:
+
+    flutter pub global activate grinder
+
+then use it to run desired tasks:
+
+    grind init
+    grind gen-bindings
+    ...
+
+or to run a default task (see `@DefaultTask` in [tool/gring.dart](tool/grind.dart)):
+
+    grind
+
+or to display a list of available tasks and their dependencies:
+
+    grind -h
+
+> **_NOTE:_** On vscode, `grind` is automatically globally activated.
+
+### Binding to native code
 
 To use the native code, bindings in Dart are needed.
-To avoid writing these by hand, they are generated from the header file
+To avoid writing these by hand, they are generated from the headers files (see the `headers` section in [tool/gring.dart](ffigen.yaml))
 (`src/ndarray.h`) by `package:ffigen`.
-Regenerate the bindings by running `flutter pub run ffigen --config ffigen.yaml`.
+Regenerate the bindings by running `grind gen-bindings` or `flutter pub run ffigen  --config ffigen.yaml`.
