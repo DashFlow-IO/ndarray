@@ -42,6 +42,6 @@ or to display a list of available tasks and their dependencies:
 ### Binding to native code
 
 To use the native code, bindings in Dart are needed.
-To avoid writing these by hand, they are generated from the headers files (see the `headers` section in [tool/gring.dart](ffigen.yaml))
+To avoid writing these by hand, they are generated from the headers files (see the `headers` section in [ffigen.yaml](ffigen.yaml))
 (`src/ndarray.h`) by `package:ffigen`.
 Regenerate the bindings by running `grind gen-bindings` or `flutter pub run ffigen  --config ffigen.yaml`.
