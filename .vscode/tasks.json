@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run flutter pub global activate grinder on startup",
+      "type": "shell",
+      "command": "flutter",
+      "args": ["pub", "global",  "activate", "grinder"], 
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
