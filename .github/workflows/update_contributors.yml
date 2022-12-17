@@ -75,7 +75,7 @@ jobs:
           fi
       - name: Configure Git
         run: |
-          git config --global user.email "ci@local"
+          git config --global user.email "ci@github"
           git config --global user.name CI
 
       # Create a pull request:
