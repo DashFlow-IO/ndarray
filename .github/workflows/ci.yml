@@ -33,10 +33,18 @@ jobs:
 
     # Resolve flutter dependencies:
     - name: 'Resolve flutter dependencies'
-      run: flutter --version
+      run: flutter --version && flutter pub get
 
+    # Activate Grinder Globally:
+    - name: Activate grinder globally
+      run: flutter pub global activate grinder
+    
+    # Add Copyright headers:
+    - name: 'Copyright headers'
+      run: grind copyright-headers
+    
     # Dart Format:
-    - name: 'Dart Format'
+    - name: 'Dart format'
       id: dart-format
       run: |
         dart format --fix .
@@ -54,6 +62,7 @@ jobs:
       run: |
         git config --global user.name 'CI'
         git config --global user.email 'ci@github'
-        git add *
+        git config --global advice.addIgnoredFile false
+        git add .
         git commit -am "ci(bot): dart format changes"
-        git push
+        git push -f origin main
