@@ -8,7 +8,7 @@ import 'utils.dart';
 
 main(args) => grind(args);
 
-@DefaultTask('Initialize stuff.')
+@Task('Initialize stuff.')
 void init() {
   log('Initializing stuff...');
   final ffigen = PubApp.global('ffigen');
@@ -60,7 +60,7 @@ $contributorList
 """);
 }
 
-@Task('Generate/update the copyright headers.')
+@DefaultTask('Generate/update the copyright headers.')
 void copyrightHeaders() {
   log('Loading copyright.yaml...');
   final copyright = loadCopyright();
