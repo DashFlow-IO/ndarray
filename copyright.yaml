@@ -1,0 +1,18 @@
+authors: ndarray project authors
+license: LICENSE
+type: MIT
+contributors: CONTRIBUTORS
+comment:
+  c|h:
+      start: '/* '
+      middle: ' * '
+      end: ' */'
+include:
+  - 'lib/**.dart'
+  - 'src/**[.c|.h]'
+  - 'tool/**.dart'
+header: |
+  Copyright (c) {{ year }}, the {{ authors }}. Please see 
+  the {{ contributors }} file for details. All rights reserved. Use 
+  of this source code is governed by a {{ type }}-style license 
+  that can be found in the {{ license }} file.

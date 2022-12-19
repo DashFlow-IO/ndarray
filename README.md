@@ -26,7 +26,7 @@ First you need to activate `grinder`:
 then use it to run desired tasks:
 
     grind init
-    grind gen-bindings
+    grind bindings
     ...
 
 or to run a default task (see `@DefaultTask` in [tool/gring.dart](tool/grind.dart)):
