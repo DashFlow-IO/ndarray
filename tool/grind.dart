@@ -1,3 +1,8 @@
+// Copyright (c) 2022, the ndarray project authors. Please see
+// the CONTRIBUTORS file for details. All rights reserved. Use
+// of this source code is governed by a MIT-style license
+// that can be found in the LICENSE file.
+
 import 'dart:io';
 
 import 'package:grinder/grinder.dart';
@@ -8,7 +13,7 @@ import 'utils.dart';
 
 main(args) => grind(args);
 
-@Task('Initialize stuff.')
+@DefaultTask('Initialize stuff.')
 void init() {
   log('Initializing stuff...');
   final ffigen = PubApp.global('ffigen');
@@ -18,7 +23,7 @@ void init() {
   }
 }
 
-@DefaultTask('Generate/Update bindings to native code.')
+@Task('Generate/Update bindings to native code.')
 @Depends(init)
 void bindings([String configFile = 'ffigen.yaml']) {
   PubApp.global('ffigen').run(['--config', configFile]);
