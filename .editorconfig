@@ -1,0 +1,58 @@
+
+# EditorConfig configuration file (see <http://editorconfig.org/>).
+
+# Indicate that this file is a root-level configuration file:
+root = true
+
+# Set properties for all files:
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 80
+
+# Set properties for Dart files:
+[*.dart]
+ij_dart_delegate_to_dartfmt = true
+
+# Set properties for C files:
+[*.{c,c.txt}]
+indent_style = tab
+
+# Set properties for C header files:
+[*.{h,h.txt}]
+indent_style = tab
+
+# Set properties for C++ files:
+[*.{cpp,cpp.txt}]
+indent_style = tab
+
+# Set properties for C++ header files:
+[*.{hpp,hpp.txt}]
+indent_style = tab
+
+# Set properties for Fortran files:
+[*.{f,f.txt}]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
+
+# Set properties for Makefiles:
+[Makefile]
+indent_style = tab
+
+[*.{mk,mk.txt}]
+indent_style = tab
+
+# Set properties for Markdown files:
+[*.{md,md.txt}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false
+
+# Set properties for YAML files:
+[*.{yml,yml.txt,yaml}]
+indent_style = space
+indent_size = 2
+
