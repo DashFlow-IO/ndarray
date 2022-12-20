@@ -23,6 +23,7 @@ add_library(ndarray SHARED
   "ndarray.c"
   "bytes_per_element.c"
   "iteration_order.c"
+  "minmax_view_buffer_index.c"
 )
 
 target_include_directories(ndarray PRIVATE "${INCLUDES_DIR}")
