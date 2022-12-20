@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2022, the ndarray project authors. Please see
  * the CONTRIBUTORS file for details. All rights reserved. Use
  * of this source code is governed by a MIT-style license
@@ -8,7 +8,7 @@
 #ifndef NDARRAY_DTYPES_H
 #define NDARRAY_DTYPES_H
 
-/*
+/**
  * If C++, prevent name mangling so that the compiler emits a binary file
  * having undecorated names, thus mirroring the behavior of a C compiler.
  */
@@ -16,7 +16,7 @@
 extern "C" {
 #endif
 
-/*
+/**
  * Enumeration of underlying ndarray data types.
  */
 enum NDARRAY_DTYPE {

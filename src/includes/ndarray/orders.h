@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2022, the ndarray project authors. Please see
  * the CONTRIBUTORS file for details. All rights reserved. Use
  * of this source code is governed by a MIT-style license
@@ -8,7 +8,7 @@
 #ifndef NDARRAY_ORDERS_H
 #define NDARRAY_ORDERS_H
 
-/*
+/**
  * Enumeration of ndarray orders (i.e., memory layout/iteration order).
  */
 enum NDARRAY_ORDER {

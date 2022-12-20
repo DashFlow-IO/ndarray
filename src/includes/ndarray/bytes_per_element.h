@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2022, the ndarray project authors. Please see
  * the CONTRIBUTORS file for details. All rights reserved. Use
  * of this source code is governed by a MIT-style license
@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include "dtypes.h"
 
-/*
+/**
  * If C++, prevent name mangling so that the compiler emits a binary file having
  * undecorated names, thus mirroring the behavior of a C compiler.
  */
@@ -19,7 +19,7 @@
 extern "C" {
 #endif
 
-/*
+/**
  * Enumeration of number of bytes necessary to store an ndarray data type.
  */
 enum NDARRAY_BYTES_PER_ELEMENT {
@@ -51,7 +51,7 @@ enum NDARRAY_BYTES_PER_ELEMENT {
   NDARRAY_BINARY_BYTES_PER_ELEMENT = 1
 };
 
-/*
+/**
  * Returns the number of bytes per element for a given data type.
  */
 int64_t ndarray_bytes_per_element(enum NDARRAY_DTYPE dtype);

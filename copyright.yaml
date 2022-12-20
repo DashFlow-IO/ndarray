@@ -4,7 +4,7 @@ type: MIT
 contributors: CONTRIBUTORS
 comment:
   c|h:
-      start: '/*'
+      start: '/**'
       middle: ' * '
       end: ' */'
 include:
