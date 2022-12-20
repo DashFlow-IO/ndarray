@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (c) 2022, the ndarray project authors. Please see
  * the CONTRIBUTORS file for details. All rights reserved. Use
  * of this source code is governed by a MIT-style license
@@ -8,13 +8,13 @@
 #ifndef NDARRAY_BASE_BYTES_PER_ELEMENT_H
 #define NDARRAY_BASE_BYTES_PER_ELEMENT_H
 
-#include "../dtypes.h"
+#include "dtypes.h"
 #include <stdint.h>
 
-/*
- * If C++, prevent name mangling so that the compiler emits a binary file having
- * undecorated names, thus mirroring the behavior of a C compiler.
- */
+ /*
+  * If C++, prevent name mangling so that the compiler emits a binary file having
+  * undecorated names, thus mirroring the behavior of a C compiler.
+  */
 #ifdef __cplusplus
 extern "C" {
 #endif

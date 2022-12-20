@@ -8,9 +8,9 @@ output: 'lib/bindings.dart'
 ffi-native:
 headers:
   entry-points:
-    - 'src/ndarray.h'
+    - 'src/include/ndarray.h'
   include-directives:
-    - 'src/**.h'
+    - 'src/include/**.h'
 preamble: |
   // ignore_for_file: always_specify_types
   // ignore_for_file: camel_case_types
