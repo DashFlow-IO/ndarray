@@ -4,7 +4,6 @@
 Language: Cpp
 BasedOnStyle: Google
 AccessModifierOffset: -1
-AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: true
 AlignOperands: Align
 AllowAllArgumentsOnNextLine: true
@@ -14,14 +13,9 @@ AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Inline
 
-AlignConsecutiveMacros:
-  Enabled: true
-  AcrossEmptyLines: true
-  AcrossComments: true
-
+AlignConsecutiveMacros: true
 AlignTrailingComments: true
 AllowShortEnumsOnASingleLine: false
-BreakConstructorInitializers: AfterColon
 AlignAfterOpenBracket: BlockIndent
 
 # To avoid conflict, set this "Never" and each "if statement" should include brace when coding
@@ -58,7 +52,7 @@ ColumnLimit: 80
 CompactNamespaces: false
 ContinuationIndentWidth: 4
 Cpp11BracedListStyle: true
-DerivePointerAlignment: false  # Make sure the * or & align on the left
+DerivePointerAlignment: false # Make sure the * or & align on the left
 EmptyLineBeforeAccessModifier: LogicalBlock
 FixNamespaceComments: true
 IncludeBlocks: Preserve
@@ -94,4 +88,3 @@ SpacesInSquareBrackets: false
 Standard: c++11
 TabWidth: 2
 UseTab: Never
-

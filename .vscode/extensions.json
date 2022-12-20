@@ -7,6 +7,7 @@
         "MS-CEINTL.vscode-language-pack-pt-BR",
         "ms-vscode.cmake-tools",
         "llvm-vs-code-extensions.vscode-clangd",
+        "redhat.vscode-yaml",
         "vscode-icons-team.vscode-icons"
     ]
 }

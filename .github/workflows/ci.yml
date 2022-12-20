@@ -1,6 +1,6 @@
 name: CI
 on:
-  push: {branches: [main]}
+  push: { branches: [main] }
   pull_request:
 
   # Allow the workflow to be manually run:
@@ -8,61 +8,69 @@ on:
 
 jobs:
   analyze:
-    name: 'Static analysis'
+    name: "Static analysis"
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'master'
-    - run: flutter --version
-    - run: flutter pub get
-    - run: flutter analyze --fatal-infos --fatal-warnings .
-
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: "master"
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter analyze --fatal-infos --fatal-warnings .
 
   format:
-    name: 'Code formatting'
+    name: "Code formatting"
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'master'
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: "master"
 
-    # Resolve flutter dependencies:
-    - name: 'Resolve flutter dependencies'
-      run: flutter --version && flutter pub get
+      # Resolve flutter dependencies:
+      - name: "Resolve flutter dependencies"
+        run: |
+          flutter --version
+          flutter pub get
 
-    # Activate Grinder Globally:
-    - name: Activate grinder globally
-      run: flutter pub global activate grinder
-    
-    # Add Copyright headers:
-    - name: 'Copyright headers'
-      run: grind copyright-headers
-    
-    # Dart Format:
-    - name: 'Dart format'
-      id: dart-format
-      run: |
-        dart format --fix .
+      # Activate Grinder Globally:
+      - name: Activate grinder globally
+        run: flutter pub global activate grinder
 
-        if [[ -z "$(git status --porcelain)" ]]; then
-          echo "No changes to commit."
-          echo "changed=false" >> $GITHUB_OUTPUT
-        else
-          echo "changed=true" >> $GITHUB_OUTPUT
-        fi
-    
-    # Commit changes and push:
-    - name: 'Commit changes and push'
-      if: steps.dart-format.outputs.changed == 'true'
-      run: |
-        git config --global user.name 'CI'
-        git config --global user.email 'ci@github'
-        git config --global advice.addIgnoredFile false
-        git add .
-        git commit -am "ci(bot): dart format changes"
-        git push -f origin main
+      # Install clang tools:
+      - name: Install clang tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y clang-format
+
+      # Add Copyright headers:
+      - name: "Copyright headers"
+        run: grind copyright-headers
+
+      # Code Format:
+      - name: "Format code"
+        id: format-code
+        run: |
+          dart format --fix .
+          find src -iname '*.h' -o -iname '*.c' | xargs clang-format -i
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Commit changes and push:
+      - name: "Commit changes and push"
+        if: steps.format-code.outputs.changed == 'true'
+        run: |
+          git config --global user.name 'CI'
+          git config --global user.email 'ci@github'
+          git config --global advice.addIgnoredFile false
+          git add .
+          git commit -am "ci(bot): code format changes"
+          git push -f origin main
