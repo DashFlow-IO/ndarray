@@ -328,7 +328,7 @@ int8_t ndarray_get_ptr_complex64(const uint8_t* idx, ndarray_complex64_t* out);
 int8_t ndarray_get_ptr_bool(const uint8_t* idx, bool* out);
 
 // ****************************************************************************
-//                             get index interface
+//                            get at index interface
 // ****************************************************************************
 
 /**
@@ -438,5 +438,15 @@ int8_t ndarray_iget_complex64(
 int8_t ndarray_iget_bool(
     const struct ndarray* arr, const int64_t idx, bool* out
 );
+
+// ****************************************************************************
+//                       get pointer at index interface
+// ****************************************************************************
+
+/**
+ * Returns a pointer in the underlying byte array for an ndarray data element
+ * located at a specified linear index.
+ */
+uint8_t* ndarray_iget_ptr(const struct ndarray* arr, const int64_t idx);
 
 #endif  // !NDARRAY_H
