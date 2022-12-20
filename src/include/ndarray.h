@@ -552,6 +552,94 @@ int8_t ndarray_set_bool(
 );
 
 // ****************************************************************************
+//                           set pointer interface
+// ****************************************************************************
+
+/**
+ * Sets an ndarray data element specified by a byte array pointer.
+ */
+int8_t ndarray_set_ptr_value(
+    const struct ndarray* arr, uint8_t* idx, const void* v
+);
+
+/**
+ * Sets a double-precision floating-point ndarray data element specified by a
+ * byte array pointer.
+ */
+int8_t ndarray_set_ptr_float64(uint8_t* idx, const double v);
+
+/**
+ * Sets a single-precision floating-point ndarray data element specified by a
+ * byte array pointer.
+ */
+int8_t ndarray_set_ptr_float32(uint8_t* idx, const float v);
+
+/**
+ * Sets an unsigned 64-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_set_ptr_uint64(uint8_t* idx, const uint64_t v);
+
+/**
+ * Sets a signed 64-bit integer ndarray data element specified by a byte array
+ * pointer.
+ */
+int8_t ndarray_set_ptr_int64(uint8_t* idx, const int64_t v);
+
+/**
+ * Sets an unsigned 32-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_set_ptr_uint32(uint8_t* idx, const uint32_t v);
+
+/**
+ * Sets a signed 32-bit integer ndarray data element specified by a byte array
+ * pointer.
+ */
+int8_t ndarray_set_ptr_int32(uint8_t* idx, const int32_t v);
+
+/**
+ * Sets an unsigned 16-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_set_ptr_uint16(uint8_t* idx, const uint16_t v);
+
+/**
+ * Sets a signed 16-bit integer ndarray data element specified by a byte array
+ * pointer.
+ */
+int8_t ndarray_set_ptr_int16(uint8_t* idx, const int16_t v);
+
+/**
+ * Sets an unsigned 8-bit integer ndarray data element specified by a byte array
+ * pointer.
+ */
+int8_t ndarray_set_ptr_uint8(uint8_t* idx, const uint8_t v);
+
+/**
+ * Sets a signed 8-bit integer ndarray data element specified by a byte array
+ * pointer.
+ */
+int8_t ndarray_set_ptr_int8(uint8_t* idx, const int8_t v);
+
+/**
+ * Sets a double-precision complex floating-point ndarray data element specified
+ * by a byte array pointer.
+ */
+int8_t ndarray_set_ptr_complex128(uint8_t* idx, const ndarray_complex128_t v);
+
+/**
+ * Sets a single-precision complex floating-point ndarray data element specified
+ * by a byte array pointer.
+ */
+int8_t ndarray_set_ptr_complex64(uint8_t* idx, const ndarray_complex64_t v);
+
+/**
+ * Sets a boolean ndarray data element specified by a byte array pointer.
+ */
+int8_t ndarray_set_ptr_bool(uint8_t* idx, const bool v);
+
+// ****************************************************************************
 //                           set at index interface
 // ****************************************************************************
 
