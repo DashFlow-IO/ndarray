@@ -20,11 +20,12 @@ variable_watch(INCLUDES_DIR)
 set(INCLUDES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/includes")
 
 add_library(ndarray SHARED
-  "ndarray.c"
   "bytes_per_element.c"
   "iteration_order.c"
   "minmax_view_buffer_index.c"
+  "ndarray.c"
   "numel.c"
+  "strides2order.c"
 )
 
 target_include_directories(ndarray PRIVATE "${INCLUDES_DIR}")
