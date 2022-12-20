@@ -21,6 +21,8 @@ set(INCLUDES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/includes")
 
 add_library(ndarray SHARED
   "ndarray.c"
+  "bytes_per_element.c"
+  "iteration_order.c"
 )
 
 target_include_directories(ndarray PRIVATE "${INCLUDES_DIR}")
