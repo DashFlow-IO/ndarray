@@ -134,7 +134,7 @@ can be found in the {{ license }} file.
   String _asCommentHeader(String header, CommentStyle comment) {
     final lines = [
       if (comment.start.isNotEmpty) "${comment.start}",
-      ...header.split('\n').map((line) => '${comment.middle}${line.trim()}'),
+      ...header.split('\n').map((line) => '${comment.middle}$line'),
       if (comment.end.isNotEmpty) "${comment.end}"
     ];
     return lines.join('\n');
