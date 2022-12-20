@@ -6,9 +6,7 @@
         "GitHub.vscode-pull-request-github",
         "MS-CEINTL.vscode-language-pack-pt-BR",
         "ms-vscode.cmake-tools",
-        "ms-vscode.cpptools",
-        "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.cpptools-themes",
+        "llvm-vs-code-extensions.vscode-clangd",
         "vscode-icons-team.vscode-icons"
     ]
 }
