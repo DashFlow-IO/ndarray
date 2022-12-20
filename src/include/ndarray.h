@@ -327,4 +327,116 @@ int8_t ndarray_get_ptr_complex64(const uint8_t* idx, ndarray_complex64_t* out);
  */
 int8_t ndarray_get_ptr_bool(const uint8_t* idx, bool* out);
 
+// ****************************************************************************
+//                             get index interface
+// ****************************************************************************
+
+/**
+ * Returns an ndarray data element located at a specified linear index.
+ */
+int8_t ndarray_iget(const struct ndarray* arr, const int64_t idx, void* out);
+
+/**
+ * Returns a double-precision floating-point ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iget_float64(
+    const struct ndarray* arr, const int64_t idx, double* out
+);
+
+/**
+ * Returns a single-precision floating-point ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iget_float32(
+    const struct ndarray* arr, const int64_t idx, float* out
+);
+
+/**
+ * Returns an unsigned 64-bit integer ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iget_uint64(
+    const struct ndarray* arr, const int64_t idx, uint64_t* out
+);
+
+/**
+ * Returns a signed 64-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iget_int64(
+    const struct ndarray* arr, const int64_t idx, int64_t* out
+);
+
+/**
+ * Returns an unsigned 32-bit integer ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iget_uint32(
+    const struct ndarray* arr, const int64_t idx, uint32_t* out
+);
+
+/**
+ * Returns a signed 32-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iget_int32(
+    const struct ndarray* arr, const int64_t idx, int32_t* out
+);
+
+/**
+ * Returns an unsigned 16-bit integer ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iget_uint16(
+    const struct ndarray* arr, const int64_t idx, uint16_t* out
+);
+
+/**
+ * Returns a signed 16-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iget_int16(
+    const struct ndarray* arr, const int64_t idx, int16_t* out
+);
+
+/**
+ * Returns an unsigned 8-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iget_uint8(
+    const struct ndarray* arr, const int64_t idx, uint8_t* out
+);
+
+/**
+ * Returns a signed 8-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iget_int8(
+    const struct ndarray* arr, const int64_t idx, int8_t* out
+);
+
+/**
+ * Returns a double-precision complex floating-point ndarray data element
+ * located at a specified linear index.
+ */
+int8_t ndarray_iget_complex128(
+    const struct ndarray* arr, const int64_t idx, ndarray_complex128_t* out
+);
+
+/**
+ * Returns a single-precision complex floating-point ndarray data element
+ * located at a specified linear index.
+ */
+int8_t ndarray_iget_complex64(
+    const struct ndarray* arr, const int64_t idx, ndarray_complex64_t* out
+);
+
+/**
+ * Returns a boolean ndarray data element located at a specified linear index.
+ */
+int8_t ndarray_iget_bool(
+    const struct ndarray* arr, const int64_t idx, bool* out
+);
+
 #endif  // !NDARRAY_H
