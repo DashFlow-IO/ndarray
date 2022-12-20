@@ -232,4 +232,99 @@ int8_t ndarray_get_bool(
     const struct ndarray* arr, const int64_t* sub, bool* out
 );
 
+// ****************************************************************************
+//                             get pointer interface
+// ****************************************************************************
+
+/**
+ * Returns a pointer to an ndarray data element in the underlying byte array.
+ */
+uint8_t* ndarray_get_ptr(const struct ndarray* arr, const int64_t* sub);
+
+/**
+ * Returns an ndarray data element specified by a byte array pointer.
+ */
+int8_t ndarray_get_ptr_value(
+    const struct ndarray* arr, const uint8_t* idx, void* out
+);
+
+/**
+ * Returns a double-precision floating-point ndarray data element specified by a
+ * byte array pointer.
+ */
+int8_t ndarray_get_ptr_float64(const uint8_t* idx, double* out);
+
+/**
+ * Returns a single-precision floating-point ndarray data element specified by a
+ * byte array pointer.
+ */
+int8_t ndarray_get_ptr_float32(const uint8_t* idx, float* out);
+
+/**
+ * Returns an unsigned 64-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_uint64(const uint8_t* idx, uint64_t* out);
+
+/**
+ * Returns a signed 64-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_int64(const uint8_t* idx, int64_t* out);
+
+/**
+ * Returns an unsigned 32-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_uint32(const uint8_t* idx, uint32_t* out);
+
+/**
+ * Returns a signed 32-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_int32(const uint8_t* idx, int32_t* out);
+
+/**
+ * Returns an unsigned 16-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_uint16(const uint8_t* idx, uint16_t* out);
+
+/**
+ * Returns a signed 16-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_int16(const uint8_t* idx, int16_t* out);
+
+/**
+ * Returns an unsigned 8-bit integer ndarray data element specified by a byte
+ * array pointer.
+ */
+int8_t ndarray_get_ptr_uint8(const uint8_t* idx, uint8_t* out);
+
+/**
+ * Returns a signed 8-bit integer ndarray data element specified by a byte array
+ * pointer.
+ */
+int8_t ndarray_get_ptr_int8(const uint8_t* idx, int8_t* out);
+
+/**
+ * Returns a double-precision complex floating-point ndarray data element
+ * specified by a byte array pointer.
+ */
+int8_t ndarray_get_ptr_complex128(
+    const uint8_t* idx, ndarray_complex128_t* out
+);
+
+/**
+ * Returns a single-precision complex floating-point ndarray data element
+ * specified by a byte array pointer.
+ */
+int8_t ndarray_get_ptr_complex64(const uint8_t* idx, ndarray_complex64_t* out);
+
+/**
+ * Returns a boolean ndarray data element specified by a byte array pointer.
+ */
+int8_t ndarray_get_ptr_bool(const uint8_t* idx, bool* out);
+
 #endif  // !NDARRAY_H
