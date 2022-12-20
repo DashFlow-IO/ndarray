@@ -15,6 +15,7 @@
 #include "ndarray/complex/float64.h"
 #include "ndarray/dtypes.h"
 #include "ndarray/index_modes.h"
+#include "ndarray/macros.h"
 #include "ndarray/orders.h"
 
 /*
@@ -131,6 +132,119 @@ struct ndarray {
   // (e.g., see macros):
   int64_t flags;
 };
+
+// ****************************************************************************
+//                            properties interface
+// ****************************************************************************
+
+/*
+ * Returns a pointer to a dynamically allocated ndarray.
+ */
+struct ndarray* ndarray_allocate(
+    int16_t dtype, uint8_t* data, int64_t ndims, int64_t* shape,
+    int64_t* strides, int64_t offset, int8_t order, int8_t imode,
+    int64_t nsubmodes, int8_t* submodes
+);
+
+/*
+ * Returns the size of an ndarray (in bytes).
+ */
+int64_t ndarray_bytelength(const struct ndarray* arr);
+
+/*
+ * Returns a pointer to an ndarray's underlying byte array.
+ */
+uint8_t* ndarray_data(const struct ndarray* arr);
+
+/*
+ * Returns an ndarray dimension.
+ */
+int64_t ndarray_dimension(const struct ndarray* arr, const int64_t i);
+
+/*
+ * Disables specified ndarray flags.
+ */
+int8_t ndarray_disable_flags(struct ndarray* arr, const int64_t flags);
+
+/*
+ * Returns an ndarray data type.
+ */
+int16_t ndarray_dtype(const struct ndarray* arr);
+
+/*
+ * Enables specified ndarray flags.
+ */
+int8_t ndarray_enable_flags(struct ndarray* arr, const int64_t flags);
+
+/*
+ * Returns ndarray flags.
+ */
+int64_t ndarray_flags(const struct ndarray* arr);
+
+/*
+ * Frees an ndarray's allocated memory.
+ */
+void ndarray_free(struct ndarray* arr);
+
+/*
+ * Tests whether an ndarray has specified flags enabled.
+ */
+int8_t ndarray_has_flags(const struct ndarray* arr, const int64_t flags);
+
+/*
+ * Returns the index mode of an ndarray.
+ */
+int8_t ndarray_index_mode(const struct ndarray* arr);
+
+/*
+ * Returns the number of elements in an ndarray.
+ */
+int64_t ndarray_length(const struct ndarray* arr);
+
+/*
+ * Returns the number of ndarray dimensions.
+ */
+int64_t ndarray_ndims(const struct ndarray* arr);
+
+/*
+ * Returns an ndarray index offset (in bytes).
+ */
+int64_t ndarray_offset(const struct ndarray* arr);
+
+/*
+ * Returns the order of an ndarray.
+ */
+int8_t ndarray_order(const struct ndarray* arr);
+
+/*
+ * Returns the number of ndarray subscript modes.
+ */
+int64_t ndarray_nsubmodes(const struct ndarray* arr);
+
+/*
+ * Returns a pointer to an array containing an ndarray shape (dimensions).
+ */
+int64_t* ndarray_shape(const struct ndarray* arr);
+
+/*
+ * Returns an ndarray stride (in bytes).
+ */
+int64_t ndarray_stride(const struct ndarray* arr, const int64_t i);
+
+/*
+ * Returns a pointer to an array containing ndarray strides (in bytes).
+ */
+int64_t* ndarray_strides(const struct ndarray* arr);
+
+/*
+ * Returns ndarray subscript modes.
+ */
+int8_t* ndarray_submodes(const struct ndarray* arr);
+
+/*
+ * Returns an ndarray subscript mode.
+ */
+int8_t ndarray_submode(const struct ndarray* arr, const int64_t i);
 
 // ****************************************************************************
 //                                get interface

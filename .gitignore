@@ -26,9 +26,11 @@ migrate_working_dir/
 **/doc/api/
 .dart_tool/
 .packages
+.cache
 build/
 *[G|g]enerated*
 local.properties
 *ephemeral*
 flutter_export_environment.sh
 *bindings*
+
