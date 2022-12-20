@@ -4,7 +4,7 @@
 Language: Cpp
 BasedOnStyle: Google
 AccessModifierOffset: -1
-AlignConsecutiveAssignments: true
+AlignConsecutiveAssignments: AcrossEmptyLines
 AlignOperands: Align
 AllowAllArgumentsOnNextLine: true
 AllowAllConstructorInitializersOnNextLine: true
