@@ -450,6 +450,108 @@ int8_t ndarray_iget_bool(
 uint8_t* ndarray_iget_ptr(const struct ndarray* arr, const int64_t idx);
 
 // ****************************************************************************
+//                           set interface
+// ****************************************************************************
+
+/**
+ * Sets an ndarray data element.
+ */
+int8_t ndarray_set(
+    const struct ndarray* arr, const int64_t* sub, const void* v
+);
+
+/**
+ * Sets a double-precision floating-point ndarray data element.
+ */
+int8_t ndarray_set_float64(
+    const struct ndarray* arr, const int64_t* sub, const double v
+);
+
+/**
+ * Sets a single-precision floating-point ndarray data element.
+ */
+int8_t ndarray_set_float32(
+    const struct ndarray* arr, const int64_t* sub, const float v
+);
+
+/**
+ * Sets an unsigned 64-bit integer ndarray data element.
+ */
+int8_t ndarray_set_uint64(
+    const struct ndarray* arr, const int64_t* sub, const uint64_t v
+);
+
+/**
+ * Sets a signed 64-bit integer ndarray data element.
+ */
+int8_t ndarray_set_int64(
+    const struct ndarray* arr, const int64_t* sub, const int64_t v
+);
+
+/**
+ * Sets an unsigned 32-bit integer ndarray data element.
+ */
+int8_t ndarray_set_uint32(
+    const struct ndarray* arr, const int64_t* sub, const uint32_t v
+);
+
+/**
+ * Sets a signed 32-bit integer ndarray data element.
+ */
+int8_t ndarray_set_int32(
+    const struct ndarray* arr, const int64_t* sub, const int32_t v
+);
+
+/**
+ * Sets an unsigned 16-bit integer ndarray data element.
+ */
+int8_t ndarray_set_uint16(
+    const struct ndarray* arr, const int64_t* sub, const uint16_t v
+);
+
+/**
+ * Sets a signed 16-bit integer ndarray data element.
+ */
+int8_t ndarray_set_int16(
+    const struct ndarray* arr, const int64_t* sub, const int16_t v
+);
+
+/**
+ * Sets an unsigned 8-bit integer ndarray data element.
+ */
+int8_t ndarray_set_uint8(
+    const struct ndarray* arr, const int64_t* sub, const uint8_t v
+);
+
+/**
+ * Sets a signed 8-bit integer ndarray data element.
+ */
+int8_t ndarray_set_int8(
+    const struct ndarray* arr, const int64_t* sub, const int8_t v
+);
+
+/**
+ * Sets a double-precision complex floating-point ndarray data element.
+ */
+int8_t ndarray_set_complex128(
+    const struct ndarray* arr, const int64_t* sub, const ndarray_complex128_t v
+);
+
+/**
+ * Sets a single-precision complex floating-point ndarray data element.
+ */
+int8_t ndarray_set_complex64(
+    const struct ndarray* arr, const int64_t* sub, const ndarray_complex64_t v
+);
+
+/**
+ * Sets a boolean ndarray data element.
+ */
+int8_t ndarray_set_bool(
+    const struct ndarray* arr, const int64_t* sub, const bool v
+);
+
+// ****************************************************************************
 //                           set at index interface
 // ****************************************************************************
 
