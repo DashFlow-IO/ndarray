@@ -328,7 +328,7 @@ int8_t ndarray_get_ptr_complex64(const uint8_t* idx, ndarray_complex64_t* out);
 int8_t ndarray_get_ptr_bool(const uint8_t* idx, bool* out);
 
 // ****************************************************************************
-//                            get at index interface
+//                           get at index interface
 // ****************************************************************************
 
 /**
@@ -448,5 +448,119 @@ int8_t ndarray_iget_bool(
  * located at a specified linear index.
  */
 uint8_t* ndarray_iget_ptr(const struct ndarray* arr, const int64_t idx);
+
+// ****************************************************************************
+//                           set at index interface
+// ****************************************************************************
+
+/**
+ * Sets an ndarray data element located at a specified linear index.
+ */
+int8_t ndarray_iset(
+    const struct ndarray* arr, const int64_t idx, const void* v
+);
+
+/**
+ * Sets a double-precision floating-point ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iset_float64(
+    const struct ndarray* arr, const int64_t idx, const double v
+);
+
+/**
+ * Sets a single-precision floating-point ndarray data element located at a
+ * specified linear index.
+ */
+int8_t ndarray_iset_float32(
+    const struct ndarray* arr, const int64_t idx, const float v
+);
+
+/**
+ * Sets an unsigned 64-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_uint64(
+    const struct ndarray* arr, const int64_t idx, const uint64_t v
+);
+
+/**
+ * Sets a signed 64-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_int64(
+    const struct ndarray* arr, const int64_t idx, const int64_t v
+);
+
+/**
+ * Sets an unsigned 32-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_uint32(
+    const struct ndarray* arr, const int64_t idx, const uint32_t v
+);
+
+/**
+ * Sets a signed 32-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_int32(
+    const struct ndarray* arr, const int64_t idx, const int32_t v
+);
+
+/**
+ * Sets an unsigned 16-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_uint16(
+    const struct ndarray* arr, const int64_t idx, const uint16_t v
+);
+
+/**
+ * Sets a signed 16-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_int16(
+    const struct ndarray* arr, const int64_t idx, const int16_t v
+);
+
+/**
+ * Sets an unsigned 8-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_uint8(
+    const struct ndarray* arr, const int64_t idx, const uint8_t v
+);
+
+/**
+ * Sets a signed 8-bit integer ndarray data element located at a specified
+ * linear index.
+ */
+int8_t ndarray_iset_int8(
+    const struct ndarray* arr, const int64_t idx, const int8_t v
+);
+
+/**
+ * Sets a double-precision complex floating-point ndarray data element located
+ * at a specified linear index.
+ */
+int8_t ndarray_iset_complex128(
+    const struct ndarray* arr, const int64_t idx, const ndarray_complex128_t v
+);
+
+/**
+ * Sets a single-precision complex floating-point ndarray data element located
+ * at a specified linear index.
+ */
+int8_t ndarray_iset_complex64(
+    const struct ndarray* arr, const int64_t idx, const ndarray_complex64_t v
+);
+
+/**
+ * Sets a boolean ndarray data element located at a specified linear index.
+ */
+int8_t ndarray_iset_bool(
+    const struct ndarray* arr, const int64_t idx, const bool v
+);
 
 #endif  // !NDARRAY_H
