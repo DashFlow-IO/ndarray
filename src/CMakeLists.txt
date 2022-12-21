@@ -34,6 +34,7 @@ add_library(ndarray SHARED
   "ndarray.c"
   "nonsingleton_dimensions.c"
   "numel.c"
+  "shape2strides.c"
   "strides2order.c"
 )
 
