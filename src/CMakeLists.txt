@@ -38,6 +38,7 @@ add_library(ndarray SHARED
   "singleton_dimensions.c"
   "strides2offset.c"
   "strides2order.c"
+  "sub2ind.c"
 )
 
 target_include_directories(ndarray PRIVATE "${INCLUDES_DIR}")
