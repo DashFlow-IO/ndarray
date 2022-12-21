@@ -26,6 +26,7 @@ add_library(ndarray SHARED
   "bytes_per_element.c"
   "dtype_char.c"
   "function_object.c"
+  "ind2sub.c"
   "iteration_order.c"
   "minmax_view_buffer_index.c"
   "ndarray.c"
