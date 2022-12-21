@@ -21,6 +21,7 @@ set(INCLUDES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/includes")
 
 add_library(ndarray SHARED
   "assert.c"
+  "bind2vind.c"
   "bytes_per_element.c"
   "iteration_order.c"
   "minmax_view_buffer_index.c"
