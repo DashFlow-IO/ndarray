@@ -30,6 +30,7 @@ add_library(ndarray SHARED
   "iteration_order.c"
   "max_view_buffer_index.c"
   "minmax_view_buffer_index.c"
+  "min_view_buffer_index.c"
   "ndarray.c"
   "numel.c"
   "strides2order.c"
