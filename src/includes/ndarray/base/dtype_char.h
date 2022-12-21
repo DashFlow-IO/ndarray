@@ -5,7 +5,6 @@
  * that can be found in the LICENSE file.
  */
 
-
 #ifndef NDARRAY_BASE_DTYPE_CHAR_H
 #define NDARRAY_BASE_DTYPE_CHAR_H
 
