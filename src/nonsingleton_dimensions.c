@@ -5,7 +5,6 @@
  * that can be found in the LICENSE file.
  */
 
-
 #include "ndarray/base/nonsingleton_dimensions.h"
 #include <stdint.h>
 

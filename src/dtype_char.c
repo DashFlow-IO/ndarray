@@ -27,7 +27,7 @@
  * uint8_t ch = ndarray_dtype_char(NDARRAY_FLOAT64);
  * // returns 100
  */
-uint8_t stdlib_ndarray_dtype_char(enum NDARRAY_DTYPE dtype) {
+uint8_t ndarray_dtype_char(enum NDARRAY_DTYPE dtype) {
   switch (dtype) {
     case NDARRAY_FLOAT64:
       return NDARRAY_FLOAT64_CHAR;

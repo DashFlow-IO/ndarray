@@ -56,7 +56,7 @@ enum NDARRAY_DTYPE_CHAR {
 /**
  * Returns the single letter character abbreviation for a given data type.
  */
-uint8_t stdlib_ndarray_dtype_char(enum NDARRAY_DTYPE dtype);
+uint8_t ndarray_dtype_char(enum NDARRAY_DTYPE dtype);
 
 #ifdef __cplusplus
 }

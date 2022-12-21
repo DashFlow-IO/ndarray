@@ -294,7 +294,7 @@ struct ndarrayFunctionObject* ndarray_function_allocate(
  *
  * // Create a new ndarray function object:
  * struct ndarrayFunctionObject *obj =
- *     ndarray_function_allocate( name, 1, 1, functions, 1, types, data);
+ *     ndarray_function_allocate(name, 1, 1, functions, 1, types, data);
  * if (obj == NULL) {
  *     fprintf(stderr, "Error allocating memory.\n");
  *     exit(1);

@@ -41,11 +41,12 @@
  * int64_t strides[] = {-3, 1};
  * int64_t offset = 6;
  *
- * int64_t idx = ndarray_bind2vind(ndims, shape, strides, offset,
- * NDARRAY_ROW_MAJOR, 7, NDARRAY_INDEX_ERROR);
+ * int64_t idx = ndarray_bind2vind(
+ *     ndims, shape, strides, offset, NDARRAY_ROW_MAJOR, 7,
+ *     NDARRAY_INDEX_ERROR);
  * // returns 1
  */
-int64_t stdlib_ndarray_bind2vind(
+int64_t ndarray_bind2vind(
     int64_t ndims, int64_t* shape, int64_t* strides, int64_t offset,
     enum NDARRAY_ORDER order, int64_t idx, enum NDARRAY_INDEX_MODE mode
 ) {

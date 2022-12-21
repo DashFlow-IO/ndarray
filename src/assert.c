@@ -89,12 +89,12 @@ int8_t ndarray_is_allowed_data_type_cast(
  * int64_t strides[] = {10, 1};
  * int64_t offset = 0;
  *
- * int8_t b = ndarray_is_buffer_length_compatible(NDARRAY_UINT8,
- * 1000, ndims, shape, strides, offset);
+ * int8_t b = ndarray_is_buffer_length_compatible(
+ *     NDARRAY_UINT8, 1000, ndims, shape, strides, offset);
  * // returns 1
  *
- * int8_t b = ndarray_is_buffer_length_compatible(NDARRAY_UINT8,
- * 10, ndims, shape, strides, offset);
+ * int8_t b = ndarray_is_buffer_length_compatible(
+ *     NDARRAY_UINT8, 10, ndims, shape, strides, offset);
  * // returns 0
  */
 int8_t ndarray_is_buffer_length_compatible(
@@ -214,8 +214,8 @@ int8_t ndarray_is_column_major(int64_t ndims, int64_t* strides) {
  * int64_t strides[] = {1, 10};
  * int64_t offset = 0;
  *
- * int8_t b = ndarray_is_column_major_contiguous(NDARRAY_UINT8, ndims, shape,
- * strides, offset);
+ * int8_t b = ndarray_is_column_major_contiguous(
+ *     NDARRAY_UINT8, ndims, shape, strides, offset);
  * // returns 1
  */
 int8_t ndarray_is_column_major_contiguous(
@@ -255,8 +255,8 @@ int8_t ndarray_is_column_major_contiguous(
  * int64_t strides[] = {10, 1};
  * int64_t offset = 0;
  *
- * int8_t b = ndarray_is_contiguous(NDARRAY_UINT8, ndims, shape, strides,
- * offset);
+ * int8_t b = ndarray_is_contiguous(
+ *     NDARRAY_UINT8, ndims, shape, strides, offset);
  * // returns 1
  */
 int8_t ndarray_is_contiguous(
@@ -334,8 +334,8 @@ int8_t ndarray_is_row_major(int64_t ndims, int64_t* strides) {
  * int64_t strides[] = {10, 1};
  * int64_t offset = 0;
  *
- * int8_t b = ndarray_is_row_major_contiguous(NDARRAY_UINT8, ndims, shape,
- * strides, offset);
+ * int8_t b = ndarray_is_row_major_contiguous(
+ *     NDARRAY_UINT8, ndims, shape, strides, offset);
  * // returns 1
  */
 int8_t ndarray_is_row_major_contiguous(
@@ -433,8 +433,8 @@ int8_t ndarray_is_same_kind_data_type_cast(const int8_t from, const int8_t to) {
  * int64_t strides[] = {10, 1};
  * int64_t offset = 0;
  *
- * int8_t b = ndarray_is_single_segment_compatible(NDARRAY_UINT8, ndims, shape,
- * strides, offset);
+ * int8_t b = ndarray_is_single_segment_compatible(
+ *     NDARRAY_UINT8, ndims, shape, strides, offset);
  * // returns 1
  */
 int8_t ndarray_is_single_segment_compatible(

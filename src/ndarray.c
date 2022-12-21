@@ -87,8 +87,10 @@
  * int64_t nsubmodes = 1;
  *
  * // Create an ndarray:
- * struct ndarray *x = ndarray_allocate(dtype, buffer, ndims, shape,
- *     strides, offset, order, imode, nsubmodes, submodes); if (x == NULL) {
+ * struct ndarray *x = ndarray_allocate(
+ *     dtype, buffer, ndims, shape, strides, offset, order, imode, nsubmodes,
+ *     submodes);
+ * if (x == NULL) {
  *     fprintf(stderr, "Error allocating memory.\n");
  *     exit(1);
  * }
@@ -1211,7 +1213,7 @@ int8_t ndarray_iget_float32(
  *     are doing.
  * -   The function returns `-1` if unable to get an element and `0` otherwise.
  * -   For zero-dimensional arrays, the function returns the first (and only)
- * indexed element, regardless of the value of `idx`.
+ *     indexed element, regardless of the value of `idx`.
  *
  * @param arr  input ndarray
  * @param idx  linear view index
@@ -1407,7 +1409,7 @@ int8_t ndarray_iget_uint8(
  *     are doing.
  * -   The function returns `-1` if unable to get an element and `0` otherwise.
  * -   For zero-dimensional arrays, the function returns the first (and only)
- *    indexed element, regardless of the value of `idx`.
+ *     indexed element, regardless of the value of `idx`.
  *
  * @param arr  input ndarray
  * @param idx  linear view index

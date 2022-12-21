@@ -24,7 +24,7 @@ extern "C" {
  * Converts a linear index in an underlying data buffer to a linear index in an
  * array view.
  */
-int64_t stdlib_ndarray_bind2vind(
+int64_t ndarray_bind2vind(
     int64_t ndims, int64_t* shape, int64_t* strides, int64_t offset,
     enum NDARRAY_ORDER order, int64_t idx, enum NDARRAY_INDEX_MODE mode
 );

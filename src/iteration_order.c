@@ -29,7 +29,7 @@
  * uint64_t ndims = 2;
  * int64_t strides[] = {2, 1};
  *
- * int8_t o = ndarray_iteration_order( ndims, strides );
+ * int8_t o = ndarray_iteration_order(ndims, strides);
  * // returns 1
  */
 int8_t ndarray_iteration_order(int64_t ndims, int64_t* strides) {

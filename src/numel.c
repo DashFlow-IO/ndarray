@@ -16,10 +16,10 @@
  * @return       number of elements
  *
  * @example
- * #include "stdlib/ndarray/base/numel.h"
+ * #include "ndarray/base/numel.h"
  *
  * int64_t ndims = 2;
- * int64_t shape[] = { 10, 8 };
+ * int64_t shape[] = {10, 8};
  *
  * int64_t n = ndarray_numel(ndims, shape);
  * // returns 80
