@@ -32,6 +32,7 @@ add_library(ndarray SHARED
   "minmax_view_buffer_index.c"
   "min_view_buffer_index.c"
   "ndarray.c"
+  "nonsingleton_dimensions.c"
   "numel.c"
   "strides2order.c"
 )
