@@ -36,6 +36,7 @@ add_library(ndarray SHARED
   "numel.c"
   "shape2strides.c"
   "singleton_dimensions.c"
+  "strides2offset.c"
   "strides2order.c"
 )
 
