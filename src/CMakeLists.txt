@@ -24,6 +24,7 @@ add_library(ndarray SHARED
   "bind2vind.c"
   "broadcast_shapes.c"
   "bytes_per_element.c"
+  "dtype_char.c"
   "iteration_order.c"
   "minmax_view_buffer_index.c"
   "ndarray.c"
