@@ -40,6 +40,7 @@ add_library(ndarray SHARED
   "strides2order.c"
   "sub2ind.c"
   "vind2bind.c"
+  "wrap_index.c"
 )
 
 target_include_directories(ndarray PRIVATE "${INCLUDES_DIR}")
