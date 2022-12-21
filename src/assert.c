@@ -8,10 +8,10 @@
 #include "ndarray/base/assert.h"
 #include <stdint.h>
 #include <stdlib.h>
+#include "ndarray/base/bytes_per_element.h"
 #include "ndarray/base/iteration_order.h"
 #include "ndarray/base/minmax_view_buffer_index.h"
 #include "ndarray/base/numel.h"
-#include "ndarray/bytes_per_element.h"
 #include "ndarray/casting_modes.h"
 #include "ndarray/safe_casts.h"
 #include "ndarray/same_kind_casts.h"

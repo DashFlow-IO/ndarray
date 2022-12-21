@@ -9,7 +9,7 @@
 #define NDARRAY_BASE_BYTES_PER_ELEMENT_H
 
 #include <stdint.h>
-#include "dtypes.h"
+#include "ndarray/dtypes.h"
 
 /**
  * If C++, prevent name mangling so that the compiler emits a binary file having

@@ -5,7 +5,7 @@
  * that can be found in the LICENSE file.
  */
 
-#include "ndarray/bytes_per_element.h"
+#include "ndarray/base/bytes_per_element.h"
 #include <stdint.h>
 #include "ndarray/dtypes.h"
 

@@ -8,12 +8,12 @@
 #include "ndarray.h"
 #include <stdint.h>
 #include <stdlib.h>
+#include "ndarray/base/bytes_per_element.h"
 #include "ndarray/base/ind.h"
 #include "ndarray/base/iteration_order.h"
 #include "ndarray/base/minmax_view_buffer_index.h"
 #include "ndarray/base/numel.h"
 #include "ndarray/base/strides2order.h"
-#include "ndarray/bytes_per_element.h"
 #include "ndarray/complex/float32.h"
 #include "ndarray/complex/float64.h"
 #include "ndarray/dtypes.h"

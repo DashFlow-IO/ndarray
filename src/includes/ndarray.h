@@ -10,7 +10,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
-#include "ndarray/bytes_per_element.h"
+#include "ndarray/base/bytes_per_element.h"
 #include "ndarray/complex/float32.h"
 #include "ndarray/complex/float64.h"
 #include "ndarray/dtypes.h"
