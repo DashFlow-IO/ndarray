@@ -28,6 +28,7 @@ add_library(ndarray SHARED
   "function_object.c"
   "ind2sub.c"
   "iteration_order.c"
+  "max_view_buffer_index.c"
   "minmax_view_buffer_index.c"
   "ndarray.c"
   "numel.c"
