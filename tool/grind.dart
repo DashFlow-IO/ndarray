@@ -35,6 +35,18 @@ void compile() {
   log('Compiling stuff...');
 }
 
+@Task('Format code.')
+void format() {
+  log('Formating Dart code...');
+  run('dart', arguments: ['format', '--fix', 'lib/', 'tool/'], quiet: true);
+  log('Formating C/C++ code...');
+  final sources = run('find',
+      arguments: ['src', '-iname', '*.h', '-o', '-iname', '*.c'], quiet: true);
+  for (final source in sources.trim().split('\n')) {
+    run('clang-format', arguments: ['-i', source], quiet: true);
+  }
+}
+
 @Task('Deploy stuff.')
 @Depends(compile)
 void deploy() {

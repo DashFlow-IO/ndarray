@@ -54,8 +54,7 @@ jobs:
       - name: "Format code"
         id: format-code
         run: |
-          dart format --fix .
-          find src -iname '*.h' -o -iname '*.c' | xargs clang-format -i
+          grind format
 
           if [[ -z "$(git status --porcelain)" ]]; then
             echo "No changes to commit."
