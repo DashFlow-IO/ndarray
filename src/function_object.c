@@ -227,7 +227,7 @@ static int64_t ndarray_function_dispatch_types_index_of(
  *
  * // Create a new ndarray function object:
  * struct ndarrayFunctionObject *obj =
- *      ndarray_function_allocate(name, 1, 1, functions, 8, types, data);
+ *     ndarray_function_allocate(name, 1, 1, functions, 8, types, data);
  * if (obj == NULL) {
  *     fprintf(stderr, "Error allocating memory.\n");
  *     exit(1);

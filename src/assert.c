@@ -415,7 +415,7 @@ int8_t ndarray_is_same_kind_data_type_cast(const int8_t from, const int8_t to) {
  * ## Notes
  *
  * -   The function returns `1` if compatible with a single memory segment and
- * `0` otherwise.
+ *     `0` otherwise.
  *
  * @param dtype    data type
  * @param ndims    number of dimensions

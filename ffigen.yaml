@@ -10,7 +10,7 @@ headers:
   entry-points:
     - "src/includes/ndarray.h"
   include-directives:
-    - "src/includes/**.h"
+    - "**.h"
 preamble: |
   // ignore_for_file: always_specify_types
   // ignore_for_file: camel_case_types
@@ -18,3 +18,5 @@ preamble: |
 comments:
   style: any
   length: full
+compiler-opts:
+  - "-Isrc/includes"
