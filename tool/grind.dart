@@ -29,10 +29,9 @@ void bindings([String configFile = 'ffigen.yaml']) {
   PubApp.global('ffigen').run(['--config', configFile]);
 }
 
-@Task('Compile stuff.')
-@Depends(bindings)
-void compile() {
-  log('Compiling stuff...');
+@Task('Building stuff.')
+void build() {
+  run('dart', arguments: ['pub', 'run', 'ndarray:setup', 'build']);
 }
 
 @Task('Format code.')
@@ -49,7 +48,7 @@ void format() {
 }
 
 @Task('Deploy stuff.')
-@Depends(compile)
+@Depends(build)
 void deploy() {
   log('Deploying stuff...');
 }
