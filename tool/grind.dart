@@ -38,7 +38,8 @@ void compile() {
 @Task('Format code.')
 void format() {
   log('Formating Dart code...');
-  run('dart', arguments: ['format', '--fix', 'lib/', 'tool/'], quiet: true);
+  run('dart',
+      arguments: ['format', '--fix', 'lib/', 'tool/', 'bin/'], quiet: true);
   log('Formating C/C++ code...');
   final sources = run('find',
       arguments: ['src', '-iname', '*.h', '-o', '-iname', '*.c'], quiet: true);

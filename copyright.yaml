@@ -4,13 +4,14 @@ type: MIT
 contributors: CONTRIBUTORS
 comment:
   c|h:
-      start: '/**'
-      middle: ' * '
-      end: ' */'
+    start: "/**"
+    middle: " * "
+    end: " */"
 include:
-  - 'lib/**.dart'
-  - 'src/**[.c|.h]'
-  - 'tool/**.dart'
+  - "lib/**.dart"
+  - "src/**[.c|.h]"
+  - "tool/**.dart"
+  - "bin/**.dart"
 header: |-
   Copyright (c) {{ year }}, the {{ authors }}. Please see
   the {{ contributors }} file for details. All rights reserved. Use
