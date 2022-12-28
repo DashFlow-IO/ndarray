@@ -1,5 +1,5 @@
 # Run with `flutter pub run ffigen --config ffigen.yaml`.
-name: ndarray_bindings
+name: NDArray
 description: |
   Bindings for `src/includes/ndarray.h`.
 

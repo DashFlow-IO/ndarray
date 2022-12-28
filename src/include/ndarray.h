@@ -14,9 +14,14 @@
 #include "ndarray/complex/float32.h"
 #include "ndarray/complex/float64.h"
 #include "ndarray/dtypes.h"
+#include "ndarray/export.h"
 #include "ndarray/index_modes.h"
 #include "ndarray/macros.h"
 #include "ndarray/orders.h"
+
+NDARRAY_EXPORT const char* VersionString();
+
+NDARRAY_EXPORT intptr_t InitDartApiDL(void* data);
 
 /**
  * ndarray structure.

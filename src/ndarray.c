@@ -8,6 +8,7 @@
 #include "ndarray.h"
 #include <stdint.h>
 #include <stdlib.h>
+#include "dart_api_dl.h"
 #include "ndarray/base/bytes_per_element.h"
 #include "ndarray/base/ind.h"
 #include "ndarray/base/iteration_order.h"
@@ -19,6 +20,29 @@
 #include "ndarray/dtypes.h"
 #include "ndarray/index_modes.h"
 #include "ndarray/orders.h"
+
+////////////////////////////////////////////////////////////////////////////////
+// Versioning
+#define STRINGIFY_(x) #x
+#define STRINGIFY(x)  STRINGIFY_(x)
+
+#define NDARRAY_VERSION 0.0.1
+
+#define NDARRAY_VERSTR STRINGIFY(NDARRAY_VERSION)
+
+const char* VersionString() {
+  return NDARRAY_VERSTR;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// Initialize `dart_api_dl.h`
+intptr_t InitDartApiDL(void* data) {
+  return Dart_InitializeApiDL(data);
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Returns a pointer to a dynamically allocated ndarray.

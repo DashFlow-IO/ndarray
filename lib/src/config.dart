@@ -7,6 +7,10 @@ import 'dart:io';
 
 const validPlatforms = <String>['linux', 'windows', 'macos'];
 
+const packageName = 'ndarray';
+
+const ndarrayVersion = "0.0.1";
+
 String getDylibName(String name, [String platform = '']) {
   var ext = '.so';
   var prefix = 'lib';
@@ -23,6 +27,6 @@ String getDylibName(String name, [String platform = '']) {
   return prefix + name + ext;
 }
 
-String getLibName(String name, [String platform = '']) {
+String getLibName({String name = packageName, String platform = ''}) {
   return getDylibName(name, platform);
 }

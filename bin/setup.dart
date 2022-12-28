@@ -11,11 +11,6 @@ import 'package:ndarray/ndarray.dart';
 import 'package:cli_util/cli_logging.dart' show Ansi, Logger;
 import 'package:path/path.dart' as path;
 
-late final packageName = () {
-  final dirname = path.dirname(Platform.script.path);
-  return path.split(dirname).last;
-}();
-
 late final binaryStorageDir = '.dart_tool/$packageName/';
 
 /// Download `ndarray` library from Github Releases.
@@ -65,9 +60,8 @@ void build() {
   Directory.current = pwd;
   final moveLocation = '$binaryStorageDir${Platform.operatingSystem}';
   Directory(moveLocation).createSync(recursive: true);
-  final buildOutputPath = _makeBuildPath(pwd.path, getLibName(packageName));
-  File(buildOutputPath)
-      .copySync(path.join(moveLocation, getLibName(packageName)));
+  final buildOutputPath = _makeBuildPath(pwd.path, getLibName());
+  File(buildOutputPath).copySync(path.join(moveLocation, getLibName()));
   logger.stdout(
       '${ansi.green}$packageName moved to $moveLocation. Success!${ansi.none}');
   return;
