@@ -6,3 +6,4 @@
 library ndarray;
 
 export 'src/config.dart';
+export 'src/dtypes.dart';
