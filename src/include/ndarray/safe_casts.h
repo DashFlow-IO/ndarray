@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-#include "ndarray/dtypes.h"
+#include "dtypes.h"
 
 /*
  * If C++, prevent name mangling so that the compiler emits a binary file having
