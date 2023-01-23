@@ -10,9 +10,4 @@ if [ ! -d "$TOOLS_ROOT" ]; then
 fi
 if [ ! -d "$TOOLS_ROOT/depot_tools" ]; then
   git clone --depth 1 "https://chromium.googlesource.com/chromium/tools/depot_tools.git" "$TOOLS_ROOT/depot_tools"
-  if [[ ! "$PATH" == *"depot_tools"* ]]; then
-    echo -e "\n# Added by ndarray vscode workspace" >> "$HOME/.zprofile"
-    echo "export PATH=\"\$PATH:$TOOLS_ROOT/depot_tools\"" >> "$HOME/.zprofile"
-    source "$HOME/.zprofile"
-  fi
 fi

@@ -13,6 +13,11 @@ if [ ! -d "$TOOLS_ROOT/engine" ]; then
     echo "export PATH=\"\$PATH:$TOOLS_ROOT/engine/src/buildtools/mac-x64/clang/bin/\"" >> "$HOME/.zprofile"
     source "$HOME/.zprofile"
   fi
+  if [[ ! "$PATH" == *"depot_tools"* ]]; then
+    echo -e "\n# Added by ndarray vscode workspace" >> "$HOME/.zprofile"
+    echo "export PATH=\"\$PATH:$TOOLS_ROOT/depot_tools\"" >> "$HOME/.zprofile"
+    source "$HOME/.zprofile"
+  fi
 
   mkdir "$TOOLS_ROOT/engine"
   DOT_GCLIENT="$TOOLS_ROOT/engine/.gclient"
