@@ -2,15 +2,50 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run flutter pub global activate grinder on startup",
+      "label": "depot-tools-clone",
+      "detail": "Clonning depot-tools locally",
       "type": "shell",
-      "command": "flutter",
-      "args": ["pub", "global",  "activate", "grinder"], 
+      "command": "${workspaceFolder}/.vscode/scripts/depot_tools_clone.sh",
       "presentation": {
         "reveal": "always",
-        "panel": "new"
+        "showReuseMessage": false,
       },
-      "runOptions": { "runOn": "folderOpen" }
-    }
+    },
+    {
+      "label": "build-engine",
+      "detail": "Bulding Flutter engine",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/scripts/build_engine.sh",
+      "args": [
+        "host_debug_unopt"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "showReuseMessage": false,
+      },
+      "dependsOn": [
+        "depot-tools-clone"
+      ],
+    },
+    {
+      "label": "flutter-clone",
+      "detail": "Clonning flutter locally",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/scripts/flutter_clone.sh",
+      "args": [
+        "host_debug_unopt"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "showReuseMessage": true,
+        "close": true,
+      },
+      "dependsOn": [
+        "build-engine"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+    },
   ]
 }
