@@ -1,10 +1,14 @@
 # Run with `flutter pub run ffigen --config ffigen.yaml`.
-name: NDArray
+name: NdArray
 description: |
   Bindings for `src/includes/ndarray.h`.
 
   Regenerate bindings with `flutter pub run ffigen --config ffigen.yaml`.
-output: "lib/src/bindings.dart"
+output:
+  bindings: "lib/src/bindings.dart"
+  symbol-file:
+    output: "package:ndarray/symbols.yaml"
+    import-path: "package:ndarray/ndarray.dart"
 # ffi-native:
 headers:
   entry-points:
