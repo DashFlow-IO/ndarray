@@ -1,3 +1,8 @@
+// Copyright (c) 2023, the ndarray project authors. Please see
+// the CONTRIBUTORS file for details. All rights reserved. Use
+// of this source code is governed by a MIT-style license
+// that can be found in the LICENSE file.
+
 // ignore_for_file: always_specify_types
 // ignore_for_file: camel_case_types
 // ignore_for_file: non_constant_identifier_names
